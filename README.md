@@ -1,7 +1,14 @@
 [![Build Status](https://secure.travis-ci.org/tdegrunt/jsonschema.png)](http://travis-ci.org/tdegrunt/jsonschema)
 
 # jsonschema
-Simple and fast [JSON schema](http://tools.ietf.org/html/draft-zyp-json-schema-03) validator.
+[JSON schema](http://json-schema.org/) validator, which is designed to be fast and simple to use.
+The latest IETF published draft is v4, this library is mostly v4 compatible.
+
+## Contributing & bugs
+Please fork the repository, make the changes in your fork and include tests. Once you're done making changes, send in a pull request.
+
+### Bug reports
+Please include a test which shows why the code fails.
 
 ## Usage
 
@@ -9,6 +16,7 @@ Simple and fast [JSON schema](http://tools.ietf.org/html/draft-zyp-json-schema-0
 Simple object validation using JSON schemas.
 
 ```javascript
+  var Validator = require('jsonschema').Validator;
   var v = new Validator();
   var instance = 4;
   var schema = {"type": "number"};
@@ -25,6 +33,7 @@ Simple object validation using JSON schemas.
 ### Complex example, with split schemas and references
 
 ```javascript
+  var Validator = require('jsonschema').Validator;
   var v = new Validator();
 
   // Address, to be embedded on Person
